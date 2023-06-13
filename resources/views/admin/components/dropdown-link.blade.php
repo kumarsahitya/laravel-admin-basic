@@ -1,0 +1,1 @@
+<a {{ $attributes->merge(['class' => 'dropdown-item dark:text-secondary-400 hover:bg-secondary-100 dark:hover:bg-secondary-700 hover:text-secondary-900 dark:hover:text-white transition duration-150 ease-in-out']) }}>{{ $slot }}</a>
