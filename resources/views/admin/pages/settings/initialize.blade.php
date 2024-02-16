@@ -22,11 +22,11 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
     @stack('styles')
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/shopper.css', 'shopper') }}">
-    <livewire:styles />
+    <livewire:admin.styles />
 
     <!-- Scripts -->
     <wireui:scripts />
-    <livewire:scripts />
+    <livewire:admin.scripts />
     <script src="{{ mix('/js/shopper.js','shopper') }}" defer></script>
 
     @include('admin.includes._additional-styles')
@@ -117,7 +117,7 @@
             </div>
         </nav>
 
-        <livewire:initialization />
+        <livewire:admin.initialization />
     </div>
 
     @stack('scripts')

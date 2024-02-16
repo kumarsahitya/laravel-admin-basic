@@ -14,7 +14,7 @@
 
 {{--    @include('includes._favicons')--}}
 
-    <title>{{ $title ?? config('app.name') }} // {{ __('layout.meta_title') }}</title>
+    <title>{{ $title ?? app_name() }} // {{ __('layout.meta_title') }}</title>
 
     <link rel="dns-prefetch" href="{{ config('app.url') }}"/>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>

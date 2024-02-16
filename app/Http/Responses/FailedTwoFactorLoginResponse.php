@@ -2,9 +2,9 @@
 
 namespace App\Http\Responses;
 
+use App\Contracts\FailedTwoFactorLoginResponse as FailedTwoFactorLoginResponseContract;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Validation\ValidationException;
-use App\Contracts\FailedTwoFactorLoginResponse as FailedTwoFactorLoginResponseContract;
 
 class FailedTwoFactorLoginResponse implements FailedTwoFactorLoginResponseContract
 {

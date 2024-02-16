@@ -2,8 +2,8 @@
 
 namespace App\Actions;
 
-use Illuminate\Support\Collection;
 use App\Contracts\TwoFactorAuthenticationProvider;
+use Illuminate\Support\Collection;
 
 final class EnableTwoFactorAuthentication
 {

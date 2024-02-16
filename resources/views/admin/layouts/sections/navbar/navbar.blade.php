@@ -23,7 +23,7 @@
             @include('admin._partials.macros',["width"=>25,"withbg"=>'#696cff'])
           </span>
                                 <span
-                                    class="app-brand-text demo menu-text fw-bolder">{{config('app.name')}}</span>
+                                    class="app-brand-text demo menu-text fw-bolder">{{app_name()}}</span>
                             </a>
                         </div>
                     @endif

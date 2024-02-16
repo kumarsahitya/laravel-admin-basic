@@ -13,8 +13,8 @@ use Illuminate\Routing\Controller;
 
 class ForgotPasswordController extends Controller
 {
-    use ValidatesRequests;
     use SendsPasswordResetEmails;
+    use ValidatesRequests;
 
     public function __construct()
     {
@@ -24,7 +24,7 @@ class ForgotPasswordController extends Controller
             return (new MailMessage())
                 ->view('admin.mails.email')
                 ->line(__('pages/auth.email.mail.content'))
-                ->action(__('pages/auth.email.mail.action'), url(config('app.url') . route('admin.password.reset', $token, false)))
+                ->action(__('pages/auth.email.mail.action'), url(config('app.url').route('admin.password.reset', $token, false)))
                 ->line(__('pages/auth.email.mail.message'));
         });
     }

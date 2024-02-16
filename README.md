@@ -1,66 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Laravel Admin
 
-## About Laravel
+Laravel Admin is a web application build with [Laravel Shopper](https://github.com/shopperlabs/shopper) and [Sneat - Free Bootstrap 5 HTML Admin Template](https://github.com/themeselection/sneat-bootstrap-html-admin-template-free). It is complete solution for your store to make online, with managing frontend and backend.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Pre Requirements
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   Docker
+-   npm
+-   yarn
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation ⚒️
 
-## Learning Laravel
+1. First of all, make sure you have installed [Node](https://nodejs.org/en/) (LTS). If Node.js is already installed in your system, make sure the installed version is `LTS` and jump to step 2
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Install the Composer Packages: Open Terminal/Command Prompt and run the following command and wait until it finishes. It will install required packages like laravel.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+composer install
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Navigate to the Laravel Admin root directory and run the following command to install our local dependencies listed in `package.json`. You can use `npm` OR `yarn` as per your preference.
 
-## Laravel Sponsors
+> It is recommended to use Yarn
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+# For npm
+npm install
 
-### Premium Partners
+# For Yarn
+yarn install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. Rename file `.env.example` to `.env` Set configuration in `.env` File: Change below variables for connect Database, Google Analytics, Facebook Pixel, and Google Tag Manager.
 
-## Contributing
+```bash
+DB_HOST=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Setting environment: Once you set your `.env` file Run below commands for generate APP_KEY, and make storage folder as linkable.
 
-## Code of Conduct
+```bash
+# If you are using Docker please go into php bash
+docker-compose exec laravel.test bash
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Generate APP KEY
+php artisan key:generate
 
-## Security Vulnerabilities
+# Make storeage directory link
+php artisan storage:link
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. Database Migrations: Run below commands for migrate database.
 
-## License
+```bash
+# If you are using Docker please go into php bash
+docker-compose exec laravel.test bash
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Run migration
+php artisan migrate --seed
+```
+
+7. Serve Project: To run Laravel Admin run below command and wait until it finishes. You can use `npm` OR `yarn` as per your preference.
+
+> It is recommended to use Yarn
+
+```bash
+# For npm
+npm run dev
+
+# For Yarn
+yarn run development
+```
+
+8. Run Project & Login: Run below command to run the project and you can hit given URL as output in your web browser.
+
+```bash
+# For Run
+php artisan serve
+```
+
+```bash
+# For Log in
+Email: admin@example.com
+Password: Pass@123
+```
+
+9.  Enjoy :relieved:
+
+
+## Multiple Entity
+
+-   For Run Database migration: Run below commands
+```bash
+# If you are using Docker please go into php bash
+docker-compose exec laravel.test bash
+
+# for run migration
+php artisan migrate:fresh --seed --env=<EntityName>
+```
+
+## Foundation library
+
+- The Laravel Admin uses [Laravel](https://laravel.com) as a foundation PHP framework.
+- The Laravel Admin uses and inspired by [Sneat - Free Bootstrap 5 HTML Admin Template](https://github.com/themeselection/sneat-bootstrap-html-admin-template-free) as a Admin Template.
+
+### Run Test Cases 
+
+```
+php artisan test --coverage-html reports/unit --profile
+```
+```
+./vendor/bin/pest --coverage-html reports/unit --profile
+```

@@ -2,7 +2,7 @@
     {{-- Header --}}
     @slot('header')
         @component('admin.mails.html.header', ['url' => config('app.url'), 'description' => __('Online Shopping Tool')])
-            {{ config('app.name') }}
+            {{ app_name() }}
         @endcomponent
     @endslot
 
@@ -21,7 +21,7 @@
     {{-- Footer --}}
     @slot('footer')
         @component('admin.mails.html.footer')
-            © {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
+            © {{ date('Y') }} {{ app_name() }}. @lang('All rights reserved.')
         @endcomponent
     @endslot
 @endcomponent

@@ -2,9 +2,9 @@
 
 namespace App\Models\Admin;
 
+use App\Models\Admin\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Admin\Traits\HasSlug;
 
 /**
  * @property int $id

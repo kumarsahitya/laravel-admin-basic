@@ -34,6 +34,6 @@ class LoginRateLimiter
 
     protected function throttleKey(Request $request): string
     {
-        return Str::lower($request->input(config('auth.username'))) . '|' . $request->ip();
+        return Str::lower($request->input(config('auth.username'))).'|'.$request->ip();
     }
 }

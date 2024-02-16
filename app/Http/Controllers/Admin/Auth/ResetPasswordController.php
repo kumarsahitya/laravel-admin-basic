@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers\Admin\Auth;
 
+use App\Rules\RealEmailValidator;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Validation\Rules\Password;
-use App\Rules\RealEmailValidator;
 
 class ResetPasswordController extends Controller
 {
-    use ValidatesRequests;
     use ResetsPasswords;
+    use ValidatesRequests;
 
     public function __construct()
     {

@@ -34,7 +34,7 @@
 
                     <!-- Profile dropdown -->
 {{--                    @include('admin/layouts/sections/navbar/navbar')--}}
-                    <livewire:account.dropdown />
+                    <livewire:admin.account.dropdown />
                 @endif
                 <!-- END: Navbar-->
 

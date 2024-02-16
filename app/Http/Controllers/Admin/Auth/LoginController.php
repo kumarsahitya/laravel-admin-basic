@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin\Auth;
 
+use App\Actions\AttemptToAuthenticate;
+use App\Actions\RedirectIfTwoFactorAuthenticatable;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -12,8 +14,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Routing\Pipeline;
 use Illuminate\Support\Facades\Auth;
-use App\Actions\AttemptToAuthenticate;
-use App\Actions\RedirectIfTwoFactorAuthenticatable;
 
 class LoginController extends Controller
 {

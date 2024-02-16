@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Traits\Database\DisableForeignKeys;
+use App\Traits\Database\TruncateTable;
 use Database\Seeders\Auth\PermissionRoleTableSeeder;
 use Database\Seeders\Auth\PermissionsTableSeeder;
 use Database\Seeders\Auth\RolesTableSeeder;
 use Illuminate\Database\Seeder;
-use App\Traits\Database\DisableForeignKeys;
-use App\Traits\Database\TruncateTable;
 
 class AuthTableSeeder extends Seeder
 {

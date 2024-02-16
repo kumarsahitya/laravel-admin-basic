@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin\Auth\ForgotPasswordController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\Auth\TwoFactorAuthenticatedController;
-use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::prefix('admin')->group(function () {
     // Authentication...
     Route::get('/', [LoginController::class, 'showLoginForm'])
@@ -31,7 +29,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])
         ->name('admin.login-view');
 
-    Route::post('/login', [LoginController::class, 'login'])
+    Route::post('/authenticate', [LoginController::class, 'login'])
         ->name('admin.login');
 
     Route::post('/logout', [LoginController::class, 'logout'])
@@ -59,5 +57,4 @@ Route::prefix('admin')->group(function () {
             ->name('admin.two-factor.post-login');
     }
 
-    Route::get('/dashboard', DashboardController::class)->name('admin.dashboard');
 });

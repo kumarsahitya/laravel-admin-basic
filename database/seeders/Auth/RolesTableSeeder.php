@@ -2,9 +2,10 @@
 
 namespace Database\Seeders\Auth;
 
-use Illuminate\Database\Seeder;
 use App\Traits\Database\DisableForeignKeys;
+use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
+
 class RolesTableSeeder extends Seeder
 {
     use DisableForeignKeys;

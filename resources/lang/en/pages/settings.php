@@ -49,20 +49,6 @@ return [
         'update_information' => 'Update information',
     ],
 
-    'payment' => [
-        'title' => 'Payments Methods',
-        'stripe_description' => 'Accept payments on your store using third-party providers such as Stripe.',
-        'stripe_enabled' => 'Stripe is available for your store.',
-        'stripe_disabled' => 'Stripe is not enabled.',
-        'stripe_provider' => 'This provider allows you to integrate Stripe PHP into your store to allow your customers to make payments.',
-        'stripe_about' => 'Learn more about Stripe Payment',
-        'stripe_actions' => 'Enabled Stripe Payment',
-        'stripe_environment' => 'Stripe has two environments Sandbox and Live, make sure to use sandbox for testing before going live.',
-        'stripe_dashboard' => 'API Keys can be grabbed from',
-        'create_payment' => 'Create payment method',
-        'no_method' => 'No payment methods found',
-    ],
-
     'validations' => [
         'shop_name' => 'Store name is required',
         'country' => 'Country is required',
@@ -100,51 +86,6 @@ return [
         'with_role_name' => 'with :name role',
         'permissions_in_role' => 'in :name role',
         'custom_permission' => 'Custom permission',
-    ],
-
-    'mailable' => [
-        'title' => 'Mail Configuration ~ Templates ~ Mailable',
-        'configuration' => 'Configuration',
-        'configuration_summary' => 'Manage email global configuration, driver, host, port etc.',
-        'templates' => 'Templates',
-        'templates_summary' => 'Modify the mail templates that are sent to customers and administrators, manage email layouts.',
-        'mailable_summary' => 'Create Laravel mailable class to use on your project to send email notifications.',
-        'email_config' => 'Email Configuration',
-        'account_config' => 'Account Configuration',
-        'account_config_summary' => "Setup the account used to send email to customers or admins. Don't share these informations",
-        'server_config' => 'Server Configuration',
-        'server_config_summary' => 'Information related to the mail server you are going to use and the associated protocol. For more information',
-        'new_mailable' => 'Create new Mailable',
-        'mailable_placeholder' => 'Enter mailable name e.g Welcome User, WelcomeUser',
-        'markdown_template' => 'Markdown Template',
-        'markdown_template_helper' => 'Use markdown template.',
-        'force_mailable' => 'Force mailable creation even if already exists.',
-        'title_template' => 'Mail ~ Add Template',
-        'add_template' => 'Add Template',
-        'create_new_template' => 'Create new template',
-    ],
-
-    'location' => [
-        'description' => 'Manage the places you stock inventory, fulfill orders, and sell products.',
-        'count' => 'You’re using :count of 4 locations available.',
-        'add' => 'Add location',
-        'detail' => 'Details',
-        'detail_summary' => 'Give this location a short name to make it easy to identify. You’ll see this name in areas like products.',
-        'address' => 'Inventory address',
-        'address_summary' => "Your inventory's complete information. Please put valide informations this can be accessible for your customers.",
-        'set_default' => 'Set as default inventory',
-        'set_default_summary' => 'Inventory at this location is available for sale online and will use as default',
-        'is_default' => 'This is your default inventory. To change whether you fulfill online orders from this inventory, select another default inventory first.',
-    ],
-
-    'analytics' => [
-        'google' => 'Google Analytics',
-        'google_description' => 'Google Analytics allows you to track visitors to your site and generates reports that will help you with your marketing.',
-        'gtag' => 'Google Tag Manager',
-        'gtag_description' => 'Google Tag Manager allows marketing managers to easily add tags (Analytics, remarketing, etc.)',
-        'pixel' => 'Facebook Pixel',
-        'pixel_description' => 'Facebook Pixel helps you create ad campaigns to find new customers who are most like your buyers.',
-        'no_json' => 'No json file added',
     ],
 
     'legal' => [

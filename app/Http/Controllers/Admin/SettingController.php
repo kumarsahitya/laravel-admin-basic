@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Admin\User\Role;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
-use App\Models\Admin\User\Role;
 
 class SettingController extends Controller
 {

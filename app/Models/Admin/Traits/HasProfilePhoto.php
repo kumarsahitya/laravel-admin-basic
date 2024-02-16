@@ -23,6 +23,6 @@ trait HasProfilePhoto
      */
     protected function defaultProfilePhotoUrl(): string
     {
-        return 'https://ui-avatars.com/api/?name=' . urlencode($this->full_name) . '&color=1d4ed8&background=dbeafe';
+        return 'https://ui-avatars.com/api/?name='.urlencode($this->full_name).'&color=1d4ed8&background=dbeafe';
     }
 }

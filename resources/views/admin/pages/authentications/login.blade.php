@@ -26,7 +26,7 @@
                                 </span>
 
                                 <span
-                                        class="app-brand-text demo text-body fw-bolder">{{config('app.name')}}</span>
+                                        class="app-brand-text demo text-body fw-bolder">{{app_name()}}</span>
                             </a>
                         </div>
 

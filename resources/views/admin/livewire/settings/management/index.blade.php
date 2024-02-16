@@ -19,7 +19,7 @@
                         <div class="col-md-3 text-right">
                             <button
                                 class="btn btn-primary"
-                                type="button" wire:click="$emit('openModal', 'modals.create-role')"
+                                type="button" wire:click="$emit('openModal', 'admin.modals.create-role')"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="bx bx-plus"></i>
                                 {{ __('pages/settings.roles_permissions.new_role') }}

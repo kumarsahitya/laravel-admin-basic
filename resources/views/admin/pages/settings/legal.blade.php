@@ -53,16 +53,16 @@
 
         <div class="mt-6">
             <div x-show="currentTab === 'refund'">
-                <livewire:settings.legal.refund/>
+                <livewire:admin.settings.legal.refund/>
             </div>
             <div x-cloak x-show="currentTab === 'privacy'">
-                <livewire:settings.legal.privacy/>
+                <livewire:admin.settings.legal.privacy/>
             </div>
             <div x-cloak x-show="currentTab === 'terms'">
-                <livewire:settings.legal.terms/>
+                <livewire:admin.settings.legal.terms/>
             </div>
             <div x-cloak x-show="currentTab === 'shipping'">
-                <livewire:settings.legal.shipping/>
+                <livewire:admin.settings.legal.shipping/>
             </div>
         </div>
 

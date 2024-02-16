@@ -20,7 +20,7 @@
           <div class="app-brand justify-content-center">
             <a href="{{url('/')}}" class="app-brand-link gap-2">
               <span class="app-brand-logo demo">@include('admin._partials.macros',["width"=>25,"withbg"=>'#696cff'])</span>
-              <span class="app-brand-text demo text-body fw-bolder">{{config('app.name')}}</span>
+              <span class="app-brand-text demo text-body fw-bolder">{{app_name()}}</span>
             </a>
           </div>
           <!-- /Logo -->

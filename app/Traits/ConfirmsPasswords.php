@@ -49,7 +49,7 @@ trait ConfirmsPasswords
     /**
      * Determine if the user's password has been recently confirmed.
      */
-    protected function passwordIsConfirmed(int $maximumSecondsSinceConfirmation = null): bool
+    protected function passwordIsConfirmed(?int $maximumSecondsSinceConfirmation = null): bool
     {
         $maximumSecondsSinceConfirmation = $maximumSecondsSinceConfirmation ?? config('auth.password_timeout', 900);
 
@@ -63,7 +63,7 @@ trait ConfirmsPasswords
      */
     public function confirmPassword(): void
     {
-        if (!app(ConfirmPassword::class)(app(StatefulGuard::class), Auth::user(), $this->confirmablePassword)) {
+        if (! app(ConfirmPassword::class)(app(StatefulGuard::class), Auth::user(), $this->confirmablePassword)) {
             throw ValidationException::withMessages(['confirmable_password' => [__('This password does not match our records.')]]);
         }
 
@@ -89,7 +89,7 @@ trait ConfirmsPasswords
     /**
      * Ensure that the user's password has been recently confirmed.
      */
-    protected function ensurePasswordIsConfirmed(int $maximumSecondsSinceConfirmation = null)
+    protected function ensurePasswordIsConfirmed(?int $maximumSecondsSinceConfirmation = null)
     {
         $maximumSecondsSinceConfirmation = $maximumSecondsSinceConfirmation ?? config('auth.password_timeout', 900);
 

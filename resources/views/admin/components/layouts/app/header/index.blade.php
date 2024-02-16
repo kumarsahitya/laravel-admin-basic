@@ -15,7 +15,7 @@
                 </svg>
             </a>
             <!-- Profile dropdown -->
-            <livewire:account.dropdown />
+            <livewire:admin.account.dropdown />
         </div>
     </div>
 </div>

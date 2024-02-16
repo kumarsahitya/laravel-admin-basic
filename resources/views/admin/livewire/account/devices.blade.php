@@ -63,7 +63,7 @@
                                     <div class="ml-4">
                                             <span class="inline-flex rounded-md shadow-sm">
                                                 <x-admin::buttons.primary
-                                                    wire:click="$emit('openModal', 'modals.logout-others-browser')"
+                                                    wire:click="$emit('openModal', 'admin.modals.logout-others-browser')"
                                                     wire:loading.attr="disabled" type="button">
                                                     {{ __('words.log_out') }}
                                                 </x-admin::buttons.primary>

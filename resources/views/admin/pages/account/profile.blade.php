@@ -21,19 +21,19 @@
         <x-admin::breadcrumb.view :title="__('layout.account_dropdown.personal_account')" class="active"/>
     </x-admin::breadcrumb>
 
-    <livewire:account.profile/>
+    <livewire:admin.account.profile/>
 
     <x-admin::separator/>
 
-    <livewire:account.password/>
+    <livewire:admin.account.password/>
 
     @if (config('auth.2fa_enabled'))
         <x-admin::separator/>
-        <livewire:account.two-factor/>
+        <livewire:admin.account.two-factor/>
     @endif
 
     <x-admin::separator/>
 
-    <livewire:account.devices/>
+    <livewire:admin.account.devices/>
 
 @endsection

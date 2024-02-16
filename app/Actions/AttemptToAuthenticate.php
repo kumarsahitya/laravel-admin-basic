@@ -1,13 +1,12 @@
 <?php
 
-
 namespace App\Actions;
 
+use App\Services\TwoFactor\LoginRateLimiter;
 use Closure;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
-use App\Services\TwoFactor\LoginRateLimiter;
 
 final class AttemptToAuthenticate
 {

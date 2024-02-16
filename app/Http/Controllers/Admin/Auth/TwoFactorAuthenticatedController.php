@@ -21,7 +21,7 @@ class TwoFactorAuthenticatedController extends Controller
 
     public function create(TwoFactorLoginRequest $request): View
     {
-        if (!$request->hasChallengedUser()) {
+        if (! $request->hasChallengedUser()) {
             throw new HttpResponseException(redirect()->route('admin.login'));
         }
 
@@ -39,7 +39,7 @@ class TwoFactorAuthenticatedController extends Controller
 
         if ($code = $request->validRecoveryCode()) {
             $user->replaceRecoveryCode($code);
-        } elseif (!$request->hasValidCode()) {
+        } elseif (! $request->hasValidCode()) {
             return app(FailedTwoFactorLoginResponse::class);
         }
 

@@ -14,7 +14,7 @@ class SettingSeeder extends Seeder
         $names = [
             'name' => 'Laravel Admin Basic',
             'legal_name' => 'Laravel Admin Basic',
-            'email'  => 'support@laraveladmin.com',
+            'email' => 'support@laraveladmin.com',
             'logo' => '',
             'favicon' => '',
             'about' => '',
@@ -39,7 +39,7 @@ class SettingSeeder extends Seeder
             \App\Models\Admin\System\Setting::query()->create([
                 'key' => $name,
                 'value' => $value,
-             ]);
+            ]);
         }
     }
 }

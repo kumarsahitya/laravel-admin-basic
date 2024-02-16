@@ -2,14 +2,14 @@
 
 namespace App\Services\TwoFactor;
 
+use App\Actions\RecoveryCode;
+use App\Contracts\TwoFactorAuthenticationProvider;
 use BaconQrCode\Renderer\Color\Rgb;
 use BaconQrCode\Renderer\Image\SvgImageBackEnd;
 use BaconQrCode\Renderer\ImageRenderer;
 use BaconQrCode\Renderer\RendererStyle\Fill;
 use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 use BaconQrCode\Writer;
-use App\Actions\RecoveryCode;
-use App\Contracts\TwoFactorAuthenticationProvider;
 
 trait TwoFactorAuthenticatable
 {
@@ -56,7 +56,7 @@ trait TwoFactorAuthenticatable
     public function twoFactorQrCodeUrl(): string
     {
         return app(TwoFactorAuthenticationProvider::class)->qrCodeUrl(
-            config('app.name'),
+            app_name(),
             $this->email,
             decrypt($this->two_factor_secret)
         );

@@ -16,5 +16,5 @@
 @endsection
 
 @section('content')
-    <livewire:dashboard />
+    <livewire:admin.dashboard />
 @endsection

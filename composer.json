@@ -61,10 +61,10 @@
         }
     },
     "scripts": {
-        "stan": "./vendor/bin/phpstan analyse",
-        "baseline": "./vendor/bin/phpstan analyse --generate-baseline",
-        "pint": "./vendor/bin/pint",
-        "pest": "./vendor/bin/pest",
+        "stan": "./vendor/bin/phpstan analyse --memory-limit=2G --ansi",
+        "baseline": "./vendor/bin/phpstan analyse --generate-baseline --ansi",
+        "pint": "./vendor/bin/pint --ansi",
+        "pest": "./vendor/bin/pest --coverage --profile",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"

@@ -1,10 +1,9 @@
 <?php
 
-
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Traits\Database\DisableForeignKeys;
+use Illuminate\Database\Seeder;
 
 class LegalsPageSeeder extends Seeder
 {
@@ -16,16 +15,6 @@ class LegalsPageSeeder extends Seeder
     public function run(): void
     {
         $this->disableForeignKeys();
-
-        /*
-         * Refund Policy.
-         */
-        \App\Models\Admin\Legal::query()->create([
-            'title' => $title = __('Refund policy'),
-            'slug' => str_slug($title),
-            'is_enabled' => true,
-            'content' => null,
-        ]);
 
         /*
          * Privacy Policy.
@@ -42,16 +31,6 @@ class LegalsPageSeeder extends Seeder
          */
         \App\Models\Admin\Legal::query()->create([
             'title' => $title = __('Terms of use'),
-            'slug' => str_slug($title),
-            'is_enabled' => true,
-            'content' => null,
-        ]);
-
-        /*
-         * Terms of uses.
-         */
-        \App\Models\Admin\Legal::query()->create([
-            'title' => $title = __('Shipping policy'),
             'slug' => str_slug($title),
             'is_enabled' => true,
             'content' => null,

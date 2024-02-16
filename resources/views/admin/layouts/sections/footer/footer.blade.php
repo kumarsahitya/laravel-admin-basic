@@ -11,7 +11,7 @@
             , made with ❤️ by <a
                 href="{{ (!empty(config('variables.creatorUrl')) ? config('variables.creatorUrl') : '') }}"
                 target="_blank"
-                class="footer-link fw-bolder">{{ (!empty(config('app.name')) ? config('app.name') : '') }}</a>
+                class="footer-link fw-bolder">{{ (!empty(app_name()) ? app_name() : '') }}</a>
         </div>
     </div>
 </footer>

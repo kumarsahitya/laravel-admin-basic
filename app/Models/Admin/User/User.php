@@ -2,21 +2,21 @@
 
 namespace App\Models\Admin\User;
 
+use App\Models\Admin\Traits\HasProfilePhoto;
+use App\Services\TwoFactor\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\Admin\Traits\HasProfilePhoto;
-use App\Services\TwoFactor\TwoFactorAuthenticatable;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasRoles;
     use HasFactory;
     use HasProfilePhoto;
+    use HasRoles;
     use Notifiable;
     use SoftDeletes;
     use TwoFactorAuthenticatable;
@@ -103,7 +103,7 @@ class User extends Authenticatable
     public function getFullNameAttribute(): string
     {
         return $this->first_name
-            ? $this->first_name . ' ' . $this->last_name
+            ? $this->first_name.' '.$this->last_name
             : $this->last_name;
     }
 
@@ -130,9 +130,9 @@ class User extends Authenticatable
     public function scopeResearch(Builder $query, $term): Builder
     {
         return $query->where(
-            fn ($query) => $query->where('last_name', 'like', '%' . $term . '%')
-                ->orWhere('first_name', 'like', '%' . $term . '%')
-                ->orWhere('email', 'like', '%' . $term . '%')
+            fn ($query) => $query->where('last_name', 'like', '%'.$term.'%')
+                ->orWhere('first_name', 'like', '%'.$term.'%')
+                ->orWhere('email', 'like', '%'.$term.'%')
         );
     }
 
@@ -140,5 +140,4 @@ class User extends Authenticatable
     {
         return $this->hasMany(Address::class);
     }
-
 }

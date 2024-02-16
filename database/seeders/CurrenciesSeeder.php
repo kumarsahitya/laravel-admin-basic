@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Traits\Database\DisableForeignKeys;
+use Illuminate\Database\Seeder;
 
 class CurrenciesSeeder extends Seeder
 {
@@ -13,7 +13,7 @@ class CurrenciesSeeder extends Seeder
 
     public function __construct()
     {
-        $this->currencies = include __DIR__ . '/currencies.php';
+        $this->currencies = include __DIR__.'/currencies.php';
     }
 
     public function run(): void

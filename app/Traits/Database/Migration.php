@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Traits\Database;
 
 use Illuminate\Database\Schema\Blueprint;

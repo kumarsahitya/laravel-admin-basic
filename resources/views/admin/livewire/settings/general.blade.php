@@ -102,8 +102,8 @@
                                     @if ($logo)
                                         <img class="h-full w-full bg-center" src="{{ $logo->temporaryUrl() }}"
                                              alt="Store logo">
-                                    @elseif($shop_logo)
-                                        <img class="h-full w-full bg-center" src="{{ load_asset($shop_logo) }}"
+                                    @elseif($logo)
+                                        <img class="h-full w-full bg-center" src="{{ load_asset($logo) }}"
                                              alt="Store logo">
                                     @else
                                         <svg class="w-16 h-16 text-secondary-300 dark:text-secondary-400" fill="none"
@@ -131,8 +131,8 @@
                                     @if ($favicon)
                                         <img class="h-full w-full bg-center" src="{{ $favicon->temporaryUrl() }}"
                                              alt="Store favicon">
-                                    @elseif($shop_favicon)
-                                        <img class="h-full w-full bg-center" src="{{ load_asset($shop_favicon) }}"
+                                    @elseif($favicon)
+                                        <img class="h-full w-full bg-center" src="{{ load_asset($favicon) }}"
                                              alt="Store favicon">
                                     @else
                                         <svg class="w-8 h-8 text-secondary-300 dark:text-secondary-400" fill="none"
@@ -163,11 +163,11 @@
                                                 </x-admin::buttons.danger>
                                             </div>
                                         </div>
-                                    @elseif($shop_cover)
+                                    @elseif($cover)
                                         <div>
                                             <div class="overflow-hidden rounded-md shadow shrink-0">
                                                 <img class="object-cover w-full h-40"
-                                                     src="{{ load_asset($shop_cover) }}"
+                                                     src="{{ load_asset($cover) }}"
                                                      alt="Store Cover image">
                                             </div>
                                             <div class="flex items-center mt-1">
@@ -302,7 +302,7 @@
 
                         <div class="mb-3 col-md-12">
                             <x-admin::forms.group :label="__('layout.forms.label.about')" for="about">
-                                <livewire:forms.trix :value="$shop_about"/>
+                                <livewire:forms.trix :value="$about"/>
                             </x-admin::forms.group>
                         </div>
 
@@ -324,7 +324,7 @@
                                     x-data="{}">
                                 @foreach($countries as $country)
                                     <option
-                                        value="{{ $country->id }}" @selected($shop_country_id === $country->id)>
+                                        value="{{ $country->id }}" @selected($country_id === $country->id)>
                                         {{ $country->name }}
                                     </option>
                                 @endforeach
@@ -383,7 +383,7 @@
                                 autocomplete="off">
                                 @foreach($currencies as $currency)
                                     <option
-                                        value="{{ $currency->id }}" @selected($currency->id === $shop_currency_id)>{{ $currency->name . ' (' . $currency->code . ')' }}</option>
+                                        value="{{ $currency->id }}" @selected($currency->id === $currency_id)>{{ $currency->name . ' (' . $currency->code . ')' }}</option>
                                 @endforeach
                             </select>
                         </x-admin::forms.group>

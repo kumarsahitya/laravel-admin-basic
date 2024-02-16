@@ -37,7 +37,7 @@
                         </div>
                         <x-admin::forms.group :label="__('layout.forms.label.content')" for="terms-of-use-content"
                                               class="mb-3 col-md-12">
-                            <livewire:forms.trix :value="$content"/>
+                            <livewire:admin.forms.trix :value="$content"/>
                         </x-admin::forms.group>
                     </div>
                     <div class="mt-2 text-right">

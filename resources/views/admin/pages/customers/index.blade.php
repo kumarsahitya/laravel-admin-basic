@@ -1,5 +1,9 @@
-<x-admin::layouts.app :title="__('layout.sidebar.customers')">
+@extends('admin/layouts/contentNavbarLayout')
 
-    <livewire:customers.browse />
+@section('title', __('layout.sidebar.customers'))
 
-</x-admin::layouts.app>
+@section('content')
+
+    <livewire:admin.customers.browse />
+
+@endsection

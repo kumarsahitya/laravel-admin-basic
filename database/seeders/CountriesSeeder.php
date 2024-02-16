@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Traits\Database\DisableForeignKeys;
+use Illuminate\Database\Seeder;
 
 class CountriesSeeder extends Seeder
 {
@@ -15,7 +13,7 @@ class CountriesSeeder extends Seeder
 
     public function __construct()
     {
-        $this->countries = include __DIR__ . '/countries.php';
+        $this->countries = include __DIR__.'/countries.php';
     }
 
     public function run(): void

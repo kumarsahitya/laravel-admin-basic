@@ -21,7 +21,7 @@
         @if($role->can_be_removed)
             <span class="shadow-sm rounded-md">
                 <x-admin::buttons.danger
-                    wire:click="$emit('openModal', 'modals.delete-role', {{ json_encode(['id' => $role->id]) }})"
+                    wire:click="$emit('openModal', 'admin.modals.delete-role', {{ json_encode(['id' => $role->id]) }})"
                     type="button">
                     <x-heroicon-o-trash class="w-5 h-5 -ml-1 mr-2"/>
                     {{ __('layout.forms.actions.delete') }}
@@ -30,7 +30,7 @@
         @endif
         <span class="shadow-sm rounded-md">
             <x-admin::buttons.primary
-                wire:click="$emit('openModal', 'modals.create-permission', {{ json_encode(['id' => $role->id]) }})"
+                wire:click="$emit('openModal', 'admin.modals.create-permission', {{ json_encode(['id' => $role->id]) }})"
                 type="button">
                 <x-heroicon-o-key class="w-5 h-5 -ml-1 mr-2"/>
                 {{ __('pages/settings.roles_permissions.create_permission') }}
@@ -110,10 +110,10 @@
                 </div>
             </div>
             <div x-cloak x-show="currentTab === 'users'" class="card">
-                <livewire:settings.management.users-role :role="$role"/>
+                <livewire:admin.settings.management.users-role :role="$role"/>
             </div>
             <div x-cloak x-show="currentTab === 'permissions'" class="card">
-                <livewire:settings.management.permissions :role="$role"/>
+                <livewire:admin.settings.management.permissions :role="$role"/>
             </div>
 
         </div>

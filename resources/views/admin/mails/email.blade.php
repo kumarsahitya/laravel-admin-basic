@@ -57,7 +57,7 @@
     @else
         <p style="font-weight: normal;font-style: normal;font-stretch: normal;line-height: 1.71;letter-spacing: normal;color: #001737;margin-bottom: 0px;">
             @lang('Regards'),<br>
-            <span style="font-weight: 500;">{{ config('app.name') }}</span>
+            <span style="font-weight: 500;">{{ app_name() }}</span>
         </p>
     @endif
 

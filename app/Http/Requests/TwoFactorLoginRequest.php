@@ -2,12 +2,12 @@
 
 namespace App\Http\Requests;
 
+use App\Contracts\TwoFactorAuthenticationProvider;
+use App\Http\Responses\FailedTwoFactorLoginResponse;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\ValidationException;
-use App\Contracts\TwoFactorAuthenticationProvider;
-use App\Http\Responses\FailedTwoFactorLoginResponse;
 
 class TwoFactorLoginRequest extends FormRequest
 {
