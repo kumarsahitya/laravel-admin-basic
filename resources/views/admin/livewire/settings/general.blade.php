@@ -302,7 +302,7 @@
 
                         <div class="mb-3 col-md-12">
                             <x-admin::forms.group :label="__('layout.forms.label.about')" for="about">
-                                <livewire:forms.trix :value="$about"/>
+                                <livewire:admin.forms.trix :value="$about"/>
                             </x-admin::forms.group>
                         </div>
 
